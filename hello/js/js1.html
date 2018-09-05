@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>改变网页背景色</title>
+			<script type="text/javascript">
+			function color(str){
+				document.body.style.backgroundColor=str;
+				
+			}
+		</script>
+		
+	</head>
+	<style type="text/css">
+		#a{
+			font-size: 30px;
+		}
+	</style>
+	<body>
+			<p id="a">正在加载...</p>
+		<script type="text/javascript">
+			var a=document.getElementById("a");
+			
+			a.style.color="lightblue";
+		</script>
+	<input type="button" name="redbtutton" value="设为绿色"onclick="color('green')"/>
+	<input type="button" value="设为粉色"onclick="color('pink')"/>
+	<input type="button" value="设为黑色"onclick="color('black')"/>
+    <input type="color" name="设为自定义颜色" id="chgColor" value="#ff0000" onchange="chgRandomColor()" />
+    <script type="text/javascript">
+	function chgColor(color){
+		document.body.style.backgroundColor=color;
+	}
+	function chgRandomColor(){
+		var chgColor=document.getElementById("chgColor");
+		document.body.style.backgroundColor=chgColor.value;
+	}
+	</body>
+</html>
